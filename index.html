@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamat Finanças</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp">
+</head>
+
+<body>
+    <!--Menu hamburger-->
+    <div id="header-bar">
+        <div id="header-abrir">
+            <span id="abrir" class="ativo"><b>&#9776;</b></span> 
+        </div>  
+        <div id="header-fechar">
+            <span id="fechar">&times;</span> 
+        </div>
+        <div id="logo-header">
+            <img src="./img/logo.png" alt="Logo Lamat">
+        </div>  
+           
+    </div>
+    <div id="menu">
+        <!--<a href="#" id="fechar">&times;</a>-->
+        
+        <div class='profile'>
+            <img class='profile-icon' src='img/icon.jpg' alt='Ícone de Perfil'>
+            <span class='profile-name'>Juliana Castilho</span>
+            <span class='profile-admin'>Administrador</span>
+            <span class='profile-account'>Conta</span>
+        </div>
+        
+        <nav>
+            <dt>
+                Minhas contas
+            </dt>
+            <dd>
+                Casa
+            </dd>
+            <dd>
+                Santa Isabel
+            </dd>
+
+        </nav>
+    </div>
+
+    <div id="conteudo">
+
+        <section>
+            <div id="resumo">
+                <table align="center" class='resumo' width="100%">
+                    <tr align="center" class='title-resumo'>
+                        <td class='td-data' width="20%">Mês</td>
+                        <td class='td-centro' width="20%">Receita</td>
+                        <td class='td-categoria' width="20%">Despesa</td>
+                        <td class='td-titulo' width="20%">Balanço</td>
+                        <td class='table-actions' width="10%">
+                            <span id="abrirmodal" class="material-icons-sharp add">add</span>
+                        </td>
+                    </tr>
+                    <tr align="center" class='content-resumo'>
+                        <td class='td-data' width="20%"><span style="color: #ebd46c;">◂&nbsp;</span> Março 2022 <span style="color: #ebd46c;">&nbsp;▸</span></td>
+                        <td class='td-centro' width="20%">R$ 5200.00<b style="color: #ebd46c;">+</b></td>
+                        <td class='td-categoria' width="20%">R$ 2100.00<b style="color: #ebd46c;">-</b></td>
+                        <td class='td-titulo' width="20%"><b style="color: #ebd46c;">R$ 3100.00</b></td>
+                    </tr>
+                </table>                    
+            </div> 
+        </section>
+        
+        <section>
+            <div id="extrato">
+                <table class='extrato' width="100%">
+                    <tr class='title-extrato'>
+                        <td class='td-data' width="15%">Data</td>
+                        <td class='td-centro' width="20%">Centro de custo</td>
+                        <td class='td-categoria' width="15%">Categoria</td>
+                        <td class='td-titulo' width="20%">Título</td>
+                        <td class='td-descricao' width="25%">Descrição</td>
+                        <td class='td-valor' width="5%">Valor</td>
+                    </tr>
+                    <tr>
+                        <td class='td-data' width="15%">30/03/2022</td>
+                        <td class='td-centro' width="20%">Santa Isabel</td>
+                        <td class='td-categoria' width="15%">Reforma</td>
+                        <td class='td-titulo' width="20%">Mauro Center</td>
+                        <td class='td-descricao' width="25%">Polistein e lixa</td>
+                        <td class='td-valor' width="5%">182,00</td> 
+                    </tr>
+                </table>                    
+            </div> 
+        </section>
+    </div>
+
+    <!-- Inicio de modal em html -->
+    <div id="fundomodal">
+        <div id="caixamodal">
+        <div id="cabecalho">
+            <h2>Paisagem</h2>
+            <a href="#" id="fecharmodal">&times;</a>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ponte">
+        </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
