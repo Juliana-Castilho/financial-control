@@ -1,3 +1,4 @@
+//Abrir e Fechar menu lateral
 const abrirToggle = document.getElementById('abrir');
 const fecharToggle = document.getElementById('fechar');
 const activeToggle = 'ativo';
@@ -21,36 +22,17 @@ function ativarToggle() {
 }
 ativarToggle();
 
-
-
-
-
-
-
 //Modal
+const fundoModal = document.getElementById("fundo-modal");
 
-document.getElementById("abrirmodal").onclick=()=>{
-  document.getElementById("fundomodal").style.width="100vw";
-  document.getElementById("fundomodal").style.height="93vh";
-  document.getElementById("fundomodal").style.opacity="1";
-  document.getElementById("fundomodal").style.display="flex";
-  document.getElementById("fundomodal").style.top="7vh";
+document.getElementById("abrir-modal").onclick=()=>{
+  fundoModal.style.width="100vw";
+  fundoModal.style.height="93vh";
+  fundoModal.style.opacity="1";
+  fundoModal.style.display="flex";
+  fundoModal.style.top="7vh";
 }
 
-document.getElementById("fecharmodal").onclick=()=>{
-  document.getElementById("fundomodal").style.display="none";
+document.getElementById("fechar-modal").onclick=()=>{
+  fundoModal.style.display="none";
 }
-
-
-
-/*
-document.getElementById("abrir").onclick = ()=>{
-  document.getElementById("menu").style.left="0px";
-  document.getElementById("conteudo").style.marginLeft="200px";
-}
-
-document.getElementById("fechar").onclick = ()=>{
-  document.getElementById("menu").style.left="-200px";
-  document.getElementById("conteudo").style.marginLeft="0px";
-}
-*/

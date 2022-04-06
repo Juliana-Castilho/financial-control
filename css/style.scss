@@ -1,0 +1,199 @@
+$primaryColor: #240225;
+$primaryColorStrong: #150812;
+$secondaryColor: #ebd46c;
+$neutralColor: #f7f6f6;
+$neutralColorStrong: #1c1c1c;
+$lightColor: #ffffff;
+
+/*@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /*@include flexCenter();*/
+    width: 100%;
+    height: 100vh;
+    background-color: $lightColor;
+}
+
+#menu{
+    background-color: $primaryColor;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: -200px;
+    transition: ease 0.5s;
+    div.profile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0px 20px 0px;
+        background-color: $primaryColor;
+        span.profile-name, span.profile-account{
+            color: $lightColor;
+        }
+        span.profile-admin, span.profile-account{
+            font-size: 0.9rem;
+        }
+        span.profile-admin{
+            color: $secondaryColor;
+        }
+        span.profile-name{
+            margin-top: 2%;
+            text-align: center;
+        }
+        span{
+            line-height: 1.2rem;
+        }
+        img.profile-icon{
+            width: 55%;
+            height: auto;
+            border: 2.5px solid $secondaryColor;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    }
+    div.logout-container{
+        position: absolute;
+        bottom: 2%;
+        width: 100%;
+        display: flex;
+    }
+    nav {
+        background-color: $primaryColorStrong;
+        padding: 5vh 1vh;
+    }
+    dd {
+        text-decoration: none;
+        color: $lightColor;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+    }
+    dt {
+        font-weight: bold;
+        color: $lightColor;
+    }
+    dd, dt {
+        padding: 0 0 20px 10px;
+    }
+}
+
+#header-bar {
+    width: 100%;
+    display: inline-block;
+    background-color: $neutralColorStrong;
+    height: 7vh;
+    #header-abrir {
+        padding-top: 2vh;
+    }
+    #abrir, #fechar {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: $neutralColorStrong;
+        margin-left: 6vh;
+        cursor: pointer;
+        background-color: $secondaryColor;
+        border-radius: 3px;
+        width: 35px;
+        height: 25px;
+        position: absolute;
+    }
+    #abrir {
+        font-size: 12pt;
+        padding: 2px 10px;
+        display: block;
+    }
+    #fechar {
+        font-size: 17pt;
+        padding: 0px 10px;
+        display: none;
+    }
+    #logo-header {
+        margin: -0.5vh 0vh 0vh 13vh;
+        img {
+            width: 80px;
+        }
+    }
+}
+
+#conteudo {
+    padding: 5vh;
+    transition: ease 0.5s;
+    #resumo {
+        background-color: $primaryColor;
+        color: $lightColor;
+        padding: 2vh;
+        border-radius: 5px;
+        font-size: 10pt;
+        .content-resumo {
+            font-weight: bold;
+        }
+    }
+    #abrir-modal {
+        cursor: pointer;
+        position: absolute;
+        background-color: $secondaryColor;
+        color: $primaryColor;
+        border-radius: 3px;
+    }
+    #extrato {
+        background-color: $neutralColor;
+        padding: 3vh;
+        border-radius: 5px;
+        margin-top: 2vh;
+        .title-extrato {
+            font-weight: bold;
+        }
+    }
+}
+
+#fundo-modal {
+    top: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    opacity: 0;
+    transition: ease 0.2s;
+    #caixa-modal {
+        background-color: $lightColor;
+        width: 50vw;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+        #cabecalho {
+            display: flex;
+            flex-direction: row; /* um elemento ao lado do outro */
+            align-items: center;
+            #fecharmodal {
+                text-decoration: none;
+                font-size: 30pt;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h2 {
+                width: 97%;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+        }
+    }
+}
+
