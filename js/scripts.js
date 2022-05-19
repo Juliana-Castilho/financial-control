@@ -21,7 +21,7 @@ function ativarToggle() {
   
 }
 ativarToggle();
-
+/*
 //Modal
 const fundoModal = document.getElementById("fundo-modal");
 
@@ -36,3 +36,18 @@ document.getElementById("abrir-modal").onclick=()=>{
 document.getElementById("fechar-modal").onclick=()=>{
   fundoModal.style.display="none";
 }
+
+Modal errado/antigo:
+const fundoModal = document.getElementById("fundo-modal");
+
+document.getElementById("abrir-modal").onclick=()=>{
+  fundoModal.style.width="100vw";
+  fundoModal.style.height="93vh";
+  fundoModal.style.opacity="1";
+  fundoModal.style.display="flex";
+  fundoModal.style.top="7vh";
+}
+
+document.getElementById("fechar-modal").onclick=()=>{
+  fundoModal.style.display="none";
+}*/

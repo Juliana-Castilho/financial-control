@@ -148,8 +148,39 @@ body {
 #conteudo #extrato .title-extrato {
   font-weight: bold;
 }
+#conteudo #extrato .title-extrato td {
+  padding: 10px 5px;
+  vertical-align: top;
+}
+#conteudo #extrato .title-extrato .td-id {
+  display: none;
+}
+@media screen and (min-width: 1px) and (max-width: 816px) {
+  #conteudo #extrato .title-extrato .td-descricao {
+    display: none;
+  }
+}
+#conteudo #extrato .table-actions {
+  display: inline-flex;
+}
+#conteudo #extrato .table-actions #edit-btn, #conteudo #extrato .table-actions #delete-btn {
+  font-size: 18px;
+  padding-bottom: 5px;
+  padding: 0px 5px;
+}
+#conteudo #extrato .table-actions #edit-btn {
+  color: #3a8960;
+}
+#conteudo #extrato .table-actions #delete-btn {
+  color: #b53944;
+}
+@media screen and (min-width: 1px) and (max-width: 816px) {
+  #conteudo {
+    margin-left: unset !important;
+  }
+}
 
-#fundo-modal {
+.form-add, .form-edit {
   top: 5vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -161,31 +192,102 @@ body {
   opacity: 0;
   transition: ease 0.2s;
 }
-#fundo-modal #caixa-modal {
-  background-color: #ffffff;
-  width: 50vw;
+.form-add #caixa-modal, .form-edit #caixa-modal {
+  background-color: #f7f6f6;
+  width: 90vw;
   padding: 10px;
   margin: auto;
   text-align: center;
+  max-width: 400px;
+  border-radius: 5px;
 }
-#fundo-modal #caixa-modal img {
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-#fundo-modal #caixa-modal #cabecalho {
+.form-add #caixa-modal .register, .form-edit #caixa-modal .register {
   display: flex;
   flex-direction: row;
-  /* um elemento ao lado do outro */
   align-items: center;
 }
-#fundo-modal #caixa-modal #cabecalho #fecharmodal {
-  text-decoration: none;
-  font-size: 30pt;
-  font-family: Arial, Helvetica, sans-serif;
+.form-add #caixa-modal .register .form-container, .form-edit #caixa-modal .register .form-container {
+  width: 100%;
 }
-#fundo-modal #caixa-modal #cabecalho h2 {
-  width: 97%;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-}/*# sourceMappingURL=style.css.map */
+.form-add #caixa-modal .register .form-title, .form-edit #caixa-modal .register .form-title {
+  position: absolute;
+  display: block;
+  padding-top: 4px;
+  color: #240225;
+  font-weight: bold;
+}
+.form-add #caixa-modal .register #fechar-modal, .form-edit #caixa-modal .register #fechar-modal {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: end;
+  color: #150812;
+}
+.form-add #caixa-modal .register .form-container input, .form-edit #caixa-modal .register .form-container input {
+  width: 100%;
+  display: block;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+  border: none;
+  border-bottom: 1px solid #bfbfbf;
+}
+.form-add #caixa-modal .register .form-container .form-date, .form-edit #caixa-modal .register .form-container .form-date {
+  margin-top: 20px;
+}
+.form-add #caixa-modal .register .form-container .form-value, .form-edit #caixa-modal .register .form-container .form-value {
+  display: inline-flex;
+}
+.form-add #caixa-modal .register .form-container .form-value .form-receita, .form-edit #caixa-modal .register .form-container .form-value .form-receita {
+  margin-right: 22px;
+}
+.form-add #caixa-modal .register .form-container .check, .form-edit #caixa-modal .register .form-container .check {
+  background-color: #ebd46c;
+  padding: 3px 15px;
+  border-radius: 4px;
+  color: #150812;
+  cursor: pointer;
+}
+
+/*#fundo-modal {
+    top: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    opacity: 0;
+    transition: ease 0.2s;
+    #caixa-modal {
+        background-color: $lightColor;
+        width: 50vw;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+        #cabecalho {
+            display: flex;
+            flex-direction: row; 
+            //um elemento ao lado do outro
+            align-items: center;
+            #fecharmodal {
+                text-decoration: none;
+                font-size: 30pt;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h2 {
+                width: 97%;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+        }
+    }
+}*//*# sourceMappingURL=style.css.map */

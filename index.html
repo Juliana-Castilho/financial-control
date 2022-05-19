@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lamat Finanças</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamat Finanças</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp">
 </head>
 
 <body>
@@ -55,19 +55,19 @@
             <div id="resumo">
                 <table align="center" class='resumo' width="100%">
                     <tr align="center" class='title-resumo'>
-                        <td class='td-data' width="20%">Mês</td>
-                        <td class='td-centro' width="20%">Receita</td>
-                        <td class='td-categoria' width="20%">Despesa</td>
-                        <td class='td-titulo' width="20%">Balanço</td>
+                        <td class='td-mes' width="20%">Mês</td>
+                        <td class='td-receita' width="20%">Receita</td>
+                        <td class='td-despesa' width="20%">Despesa</td>
+                        <td class='td-balanco' width="20%">Balanço</td>
                         <td class='table-actions' width="10%">
                             <span id="abrir-modal" class="material-icons-sharp add">add</span>
                         </td>
                     </tr>
                     <tr align="center" class='content-resumo'>
-                        <td class='td-data' width="20%"><span style="color: #ebd46c;">◂&nbsp;</span> Março 2022 <span style="color: #ebd46c;">&nbsp;▸</span></td>
-                        <td class='td-centro' width="20%">R$ 5200.00<b style="color: #ebd46c;">+</b></td>
-                        <td class='td-categoria' width="20%">R$ 2100.00<b style="color: #ebd46c;">-</b></td>
-                        <td class='td-titulo' width="20%"><b style="color: #ebd46c;">R$ 3100.00</b></td>
+                        <td class='td-mes' width="20%"><span style="color: #ebd46c;">◂&nbsp;</span> Março 2022 <span style="color: #ebd46c;">&nbsp;▸</span></td>
+                        <td class='td-receita' width="20%">R$ 5200.00<b style="color: #ebd46c;">+</b></td>
+                        <td class='td-despesa' width="20%">R$ 2100.00<b style="color: #ebd46c;">-</b></td>
+                        <td class='td-balanco' width="20%"><b style="color: #ebd46c;">R$ 3100.00</b></td>
                     </tr>
                 </table>                    
             </div> 
@@ -77,40 +77,91 @@
             <div id="extrato">
                 <table class='extrato' width="100%">
                     <tr class='title-extrato'>
-                        <td class='td-data' width="15%">Data</td>
-                        <td class='td-centro' width="20%">Centro de custo</td>
-                        <td class='td-categoria' width="15%">Categoria</td>
-                        <td class='td-titulo' width="20%">Título</td>
-                        <td class='td-descricao' width="25%">Descrição</td>
-                        <td class='td-valor' width="5%">Valor</td>
+                        <td class='td-id'>n°</td>
+                        <td class='td-data'>Data</td>
+                        <td class='td-centro'>Centro de custo</td>
+                        <td class='td-categoria'>Categoria</td>
+                        <td class='td-titulo'>Título</td>
+                        <td class='td-descricao' style="max-width: 25%;">Descrição</td>
+                        <td class='td-valor' style="max-width: 10%;">Valor</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                         <td class='td-data' width="15%">30/03/2022</td>
                         <td class='td-centro' width="20%">Santa Isabel</td>
                         <td class='td-categoria' width="15%">Reforma</td>
                         <td class='td-titulo' width="20%">Mauro Center</td>
-                        <td class='td-descricao' width="25%">Polisten e lixa</td>
-                        <td class='td-valor' width="5%">182,00</td> 
-                    </tr>
+                        <td class='td-descricao' width="20%">Polisten e lixa</td>
+                        <td class='td-valor' width="5%">182,00</td>
+                        <td class='table-actions' width="5%">
+                            <span id="edit-btn" class="material-icons-sharp edit-btn">edit</span>
+                            <span id="delete-btn" class="material-icons-sharp delete-btn">delete</span>
+                        </td>
+                    </tr>-->
                 </table>                    
             </div> 
         </section>
     </div>
 
     <!-- Inicio de modal em html -->
-    <div id="fundo-modal">
+    <div id="fundo-modal" class='form form-add'>
         <div id="caixa-modal">
-        <div id="cabecalho">
-            <h2>Paisagem</h2>
-            <a href="#" id="fechar-modal">&times;</a>
-        </div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ponte">
-        </div>
+            <form class='register'>
+                <div class='form-container'>
+                    <span class=form-title>Cadastrar</span>
+                    <span id="fechar-modal" class="material-icons-sharp close">close</span>
+                    <input type='date' required class='form-date' name='date' placeholder="Data">
+                    <input type='text' required class='form-centro' name='centro' placeholder="Centro de Custo">
+                    <input type='text' required class='form-categoria' name='categoria' placeholder="Categoria">
+                    <input type='text' required class='form-titulo' name='titulo' placeholder="Título">
+                    <input type='text' required class='form-descricao' name='descricao' placeholder="Descrição">
+                    <div class="form-value">
+                        <input type='number' required class='form-receita' name='receita' placeholder="Receita">
+                        <input type='number' required class='form-despesa' name='despesa' placeholder="Despesa">
+                    </div>
+                    <span class="material-icons-sharp check">done</span>
+                </div>
+            </form>
         </div>
     </div>
 
+    <div id="fundo-modal" class='form form-edit'>
+        <div id="caixa-modal">
+            <form class='edit'>
+                <div class='form-container'>
+                    <span class=form-title>Editar</span>
+                    <span id="fechar-modal" class="material-icons-sharp close">close</span>
+                    <input type='hidden' class='form-id' name='id'>
+                    <input type='date' required class='form-date' name='date' placeholder="Data">
+                    <input type='text' required class='form-centro' name='centro' placeholder="Centro de Custo">
+                    <input type='text' required class='form-categoria' name='categoria' placeholder="Categoria">
+                    <input type='text' required class='form-titulo' name='titulo' placeholder="Título">
+                    <input type='text' required class='form-descricao' name='descricao' placeholder="Descrição">
+                    <div class="form-value">
+                        <input type='number' required class='form-receita' name='receita' placeholder="Receita">
+                        <input type='number' required class='form-despesa' name='despesa' placeholder="Despesa">
+                    </div>
+                    <span class="material-icons-sharp check">done</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--<div id="fundo-modal">
+        <div id="caixa-modal">
+            <div id="cabecalho">
+                <h2>Paisagem</h2>
+                <a href="#" id="fechar-modal">&times;</a>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ponte">
+            </div>
+        </div>
+    </div>-->
+
     <script src="js/scripts.js"></script>
+    <script src="js/models/User.js"></script>
+    <script src="js/controllers/UserController.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

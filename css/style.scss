@@ -1,3 +1,34 @@
+@use "sass:map";
+
+$brakpoints: (
+    xm: 1px,
+    sm: 804px,
+    md: 816px,
+    lg: 1016px,
+    xl: 1280,
+);
+
+@mixin media($start: false, $end:false) {
+    $start-value: if($start, map-get($brakpoints, $start), false);
+    $end-value: if($end, map-get($brakpoints, $end), false);
+
+    @if ($start and $end) {
+        @media screen and (min-width: $start-value) and (max-width: $end-value) {
+            @content;
+        }
+    } @else if ($start) {
+        @media screen and (min-width: $start-value) {
+            @content;
+        }
+    } @else if ($end) {
+        @media screen and (man-width: $end-value) {
+            @content;
+        }
+    } @else {
+        @error ('At least one parameter is required!');
+    }
+};
+
 $primaryColor: #240225;
 $primaryColorStrong: #150812;
 $secondaryColor: #ebd46c;
@@ -153,11 +184,121 @@ body {
         margin-top: 2vh;
         .title-extrato {
             font-weight: bold;
+            td{
+                padding: 10px 5px;
+                vertical-align: top;
+            }
+            .td-id{
+                display: none;
+            }
+            .td-descricao{
+                @include media (xm, md) {
+                   display: none;
+                }
+            }
+        }
+        .table-actions {
+            display: inline-flex;
+            #edit-btn, #delete-btn {
+                font-size: 18px;
+                padding-bottom: 5px;
+                padding: 0px 5px;
+            }
+            #edit-btn {
+                color: #3a8960;
+            }
+            #delete-btn {
+                color: #b53944;
+            }
+        }
+    }
+
+    @include media (xm, md) {
+        margin-left: unset!important;
+    }
+
+
+}
+
+.form-add, .form-edit {
+    top: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    opacity: 0;
+    transition: ease 0.2s;
+    #caixa-modal {
+        background-color: $neutralColor;
+        width: 90vw;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        max-width: 400px;
+        border-radius: 5px;
+        
+        .register {
+            display: flex;
+            flex-direction: row; 
+            //um elemento ao lado do outro
+            align-items: center;
+            .form-container {
+                width: 100%;
+            }
+            .form-title{
+                position: absolute;
+                display: block;
+                padding-top: 4px;
+                color: $primaryColor;
+                font-weight: bold;
+            }
+            #fechar-modal {
+                display: block;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+                text-align: end;
+                color: $primaryColorStrong;
+                
+            }
+            .form-container {
+                input{
+                    width: 100%;
+                    display: block;
+                    width: 100%;
+                    display: block;
+                    padding: 5px;
+                    margin: 10px 0px 10px 0px;
+                    border: none;
+                    border-bottom: 1px solid #bfbfbf;
+                }
+                .form-date {
+                    margin-top: 20px;
+                }
+                .form-value{
+                    display: inline-flex;
+                    .form-receita{
+                        margin-right: 22px;
+                    }
+                }
+                .check {
+                    background-color: $secondaryColor;
+                    padding: 3px 15px;
+                    border-radius: 4px;
+                    color: $primaryColorStrong;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
 
-#fundo-modal {
+
+
+/*#fundo-modal {
     top: 5vh;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -181,7 +322,8 @@ body {
         }
         #cabecalho {
             display: flex;
-            flex-direction: row; /* um elemento ao lado do outro */
+            flex-direction: row; 
+            //um elemento ao lado do outro
             align-items: center;
             #fecharmodal {
                 text-decoration: none;
@@ -195,5 +337,5 @@ body {
             }
         }
     }
-}
+}*/
 
